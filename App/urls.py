@@ -1,4 +1,4 @@
-"""Clase19 URL Configuration
+"""Clase20 URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.1/topics/http/urls/
@@ -15,8 +15,12 @@ Including another URLconf
 """
 
 from django.urls import path
-from App.views import mostrar_inicio
+from App.views import entregables, estudiantes, inicio, cursos, profesores
 
 urlpatterns = [
-    path("inicio/", mostrar_inicio),
-]
+    path("inicio/", inicio, name="inicio"),
+    path("entregables/", entregables, name="entregables"),
+    path("estudiantes/", estudiantes, name="estudiantes") ,
+    path("cursos/", cursos, name="cursos"),
+    path("profesores/", profesores, name="profesores"),
+    ]
